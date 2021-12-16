@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filterable List With Vanilla JavaScript</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" integrity="sha512-UJfAaOlIRtdR+0P6C3KUoTDAxVTuy3lnSXLyLKlHYJlcSU8Juge/mjeaxDNMlw9LgeIotgz5FP8eUQPhX1q10A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        li > h5 {
+            padding-left: 20px;
+        }
+        .abcd {
+            color: #4c4c4c;font-weight: bold;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+
+    
+    <div class="container">
+        <h1 class="align-center">List of Car Brands</h1>
+        <h4>Searching for ' <span class="abcd" ></span> '</h4>
+        <input type="text" id="searchFilter" placeholder="Tape here to search for a name...">
+        <ul id="theList" class="collection width-header">
+
+            <!-- Start with A Letter  -->
+            <li class="collection-header">
+                <h5>A</h5>
+            </li>
+
+            <li class="collection-item">
+                <a href="#">AAC</a>
+            </li>
+            <li class="collection-item">
+                <a href="#">ABARTH</a>
+            </li>
+            <li class="collection-item">
+                <a href="#">ABD</a>
+            </li>
+            <li class="collection-item">
+                <a href="#">ABT</a>
+            </li>
+            <li class="collection-item">
+                <a href="#">AC</a>
+            </li>
+            <li class="collection-item">
+                <a href="#">AC SCHNITZER</a>
+            </li>
+            <li class="collection-item">
+                <a href="#">ADRENALINE</a>
+            </li>
+            <li class="collection-item">
+                <a href="#">AEON</a>
+            </li>
+            <li class="collection-item">
+                <a href="#">ALAN MANN</a>
+            </li>
+            <li class="collection-item">
+                <a href="#">ALBA</a>
+            </li>
+            <li class="collection-item">
+                <a href="#">ALFA-ROMEO</a>
+            </li>
+            <li class="collection-item">
+                <a href="#">ALLARD</a>
+            </li>
+            <li class="collection-item">
+                <a href="#">ALPINA</a>
+            </li>
+            <li class="collection-item">
+                <a href="#">ALPINE</a>
+            </li>
+            <li class="collection-item">
+                <a href="#">ALVIS</a>
+            </li>
+            <li class="collection-item">
+                <a href="#">AMERICAN MOTORS</a>
+            </li>
+            <li class="collection-item">
+                <a href="#">AMG</a>
+            </li>
+            <li class="collection-item">
+                <a href="#">AMILCAR</a>
+            </li>
+            <li class="collection-item">
+                <a href="#">APOLLO</a>
+            </li>
+            <li class="collection-item">
+                <a href="#">ARASH</a>
+            </li>
+            <li class="collection-item">
+                <a href="#">ARDEN</a>
+            </li>
+            <li class="collection-item">
+                <a href="#">ARIEL</a>
+            </li>
+            <li class="collection-item">
+                <a href="#">ARK</a>
+            </li>
+            <li class="collection-item">
+                <a href="#">ARTEGA</a>
+            </li>
+            <li class="collection-item">
+                <a href="#">ASC</a>
+            </li>
+            <li class="collection-item">
+                <a href="#">ASCARI</a>
+            </li>
+            <li class="collection-item">
+                <a href="#">ASL</a>
+            </li>
+            <li class="collection-item">
+                <a href="#">ASTON MARTIN</a>
+            </li>
+
+            <!-- Start with B Letter  -->
+
+            <li class="collection-header">
+                <h5>B</h5>
+            </li>
+
+            <li class="collection-item">
+                <a href="#">Bentley</a>
+            </li>
+            <li class="collection-item">
+                <a href="#">Benz</a>
+            </li>
+            <li class="collection-item">
+                <a href="#">BMW</a>
+            </li>
+            
+            <li class="collection-item">
+                <a href="#">Bugatti</a>
+            </li>
+            <li class="collection-item">
+                <a href="#">Buick</a>
+            </li>
+
+            <!-- Start with C Letter  -->
+
+            <li class="collection-header">
+                <h5>C</h5>
+            </li>
+
+            <li class="collection-item">
+                <a href="#">Cadillac</a>
+            </li>
+            <li class="collection-item">
+                <a href="#">Callaway</a>
+            </li>
+            <li class="collection-item">
+                <a href="#">Caparo</a>
+            </li>
+            <li class="collection-item">
+                <a href="#">Carlsson</a>
+            </li>
+            <li class="collection-item">
+                <a href="#">Camelia</a>
+            </li>
+            <li class="collection-item">
+                <a href="#">Caterham</a>
+            </li>
+            <li class="collection-item">
+                <a href="#">Chevrolet</a>
+            </li>
+            <li class="collection-item">
+                <a href="#">Chrysler</a>
+            </li>
+            <li class="collection-item">
+                <a href="#">Continental</a>
+            </li>
+            <li class="collection-item">
+                <a href="#">Cooper</a>
+            </li>
+            <!-- Start with D Letter  -->
+
+            <li class="collection-header">
+                <h5>D</h5>
+            </li>
+
+            <li class="collection-item">
+                <a href="#">Dacia</a>
+            </li>
+            <li class="collection-item">
+                <a href="#">Daewoo</a>
+            </li>
+            <li class="collection-item">
+                <a href="#">Daihatsu</a>
+            </li>
+            <li class="collection-item">
+                <a href="#">Daimler</a>
+            </li>
+            <li class="collection-item">
+                <a href="#">Dauer</a>
+            </li>
+            <li class="collection-item">
+                <a href="#">David Brown</a>
+            </li>
+            <li class="collection-item">
+                <a href="#">De Dion-Bouton</a>
+            </li>
+            <li class="collection-item">
+                <a href="#">Delahaye</a>
+            </li>
+            <li class="collection-item">
+                <a href="#">Delaunay-Belleville</a>
+            </li>
+            <li class="collection-item">
+                <a href="#">DeLorean</a>
+            </li>
+            
+            <li class="collection-item">
+                <a href="#">Detroit Electric</a>
+            </li>
+            <li class="collection-item">
+                <a href="#">Devel Sixteen</a>
+            </li>
+            
+            <li class="collection-item">
+                <a href="#">Devin</a>
+            </li>
+            <li class="collection-item">
+                <a href="#">Diatto</a>
+            </li>
+            
+            <li class="collection-item">
+                <a href="#">Derby</a>
+            </li>
+            <li class="collection-item">
+                <a href="#">DKW</a>
+            </li>
+            <li class="collection-item">
+                <a href="#">Dino</a>
+            </li>
+            <li class="collection-item">
+                <a href="#">Dodge</a>
+            </li>     
+        </ul>
+    </div>
+    
+
+    <script src="./app.js"></script>
+</body>
+</html>
